@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.example.ahwang13.familymapserver"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(path: ':familymapserverlib')
+    compile files('libs/gson-2.6.2.jar')
+    compile files('libs/hamcrest-core-1.3.jar')
+    compile files('libs/json-20160212.jar')
+    compile files('libs/junit-4.12.jar')
+    compile files('libs/sqlite-jdbc-3.7.2.jar')
+    compile project(':familymapserverlib')
+    compile project(':amazon-maps-api-v2')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.joanzapata.iconify:android-iconify:2.2.2'
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.bignerdranch.android:expandablerecyclerview:3.0.0-RC1'
+    testCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,51 @@
+#createTables
+
+create table user
+(
+		id integer not null primary key autoincrement,
+		username varchar(255) not null,
+		password varchar(255) not null,
+		email varchar(255) not null,
+		firstName varchar(255) not null,
+		lastName varchar(255) not null,
+		gender varchar(255) not null,
+		person_id varchar(255) not null
+);
+
+
+create table person
+(
+		id integer not null primary key autoincrement,
+		person_id varchar(255) not null,
+		descendant varchar(255) not null,
+		firstName varchar(255) not null,
+		lastName varchar(255) not null,
+		gender varchar(255) not null,
+		father_id varchar(255),
+		mother_id varchar(255),
+		spouse_id varchar(255)
+);
+
+
+create table event
+(
+	  id integer not null primary key autoincrement,
+		event_id varchar(255) not null,
+		descendant varchar(255) not null,
+		person_id varchar(255) not null,
+		latitude real not null,
+		longitude real not null,
+		country varchar(255) not null,
+		city varchar(255) not null,
+		eventType varchar(255) not null,
+		year integer
+);
+
+
+create table authToken
+(
+		id integer not null primary key autoincrement,
+		user_id varchar(255) not null,
+		auth_id varchar(255) not null,
+		exp_time timestamp not null
+);

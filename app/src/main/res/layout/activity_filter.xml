@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context="ui.FilterActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="2"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:useDefaultMargins="false" >
+
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Male Events: "
+            android:id="@+id/maleTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp" />
+
+        <Switch
+            android:id="@+id/maleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Female Events"
+            android:id="@+id/femaleTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp" />
+
+        <Switch
+            android:id="@+id/femaleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Father's Side: "
+            android:id="@+id/fatherTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp" />
+
+        <Switch
+            android:id="@+id/fatherSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Mother's Side: "
+            android:id="@+id/motherTextView"
+            android:layout_margin="0dp"
+            android:padding="0dp" />
+
+        <Switch
+            android:id="@+id/motherSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>\
+
+    </GridLayout>
+
+    <ExpandableListView
+        android:id="@+id/event_filter_list"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"/>
+
+</LinearLayout>
